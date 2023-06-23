@@ -4,7 +4,7 @@ import AzurAuth from './src/AzurAuth/AzurAuth';
 
 export default function App() {
   return (
-    <View>
+    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
       <AzurAuth />
     </View>
   );
