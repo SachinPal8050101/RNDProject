@@ -2,20 +2,43 @@ import {View, Text, TextInput, TouchableOpacity} from 'react-native';
 import React, {useState} from 'react';
 import {authorize} from 'react-native-app-auth';
 
+// const config = {
+//   issuer:
+//     'https://devsbxopsportal.b2clogin.com/devsbxopsportal.onmicrosoft.com/b2c_1a_signin/oauth2/v2.0',
+//   clientId: '038c7925-5c48-4bba-b90a-c31c92450e72',
+//   redirectUrl: 'msauth://com.contentactive/VzSiQcXRmi2kyjzcA%2BmYLEtbGVs%3D',
+//   scopes: ['openid', 'profile'],
+//   serviceConfiguration: {
+//     authorizationEndpoint:
+//       'https://devsbxopsportal.b2clogin.com/devsbxopsportal.onmicrosoft.com/b2c_1a_signin/oauth2/v2.0/authorize',
+//     tokenEndpoint:
+//       'https://devSbxOpsPortal.b2clogin.com/devSbxOpsPortal.onmicrosoft.com/b2c_1a_signin/oauth2/v2.0/token',
+//   },
+//   additionalParameters: {
+//     login_hint: 'carrier.user7@yopmail.com ',
+//   },
+// };
+
 const config = {
-  issuer:
-    'https://devsbxopsportal.b2clogin.com/devsbxopsportal.onmicrosoft.com/b2c_1a_signin/oauth2/v2.0',
-  clientId: '038c7925-5c48-4bba-b90a-c31c92450e72',
+  issuer: 'https://sbx-operations-portal-user-web-dev.azurewebsites.net',
+  clientId: 'Operations.Portal.Mobile',
   redirectUrl: 'msauth://com.contentactive/VzSiQcXRmi2kyjzcA%2BmYLEtbGVs%3D',
-  scopes: ['openid', 'profile'],
+  scopes: [
+    'openid',
+    'profile',
+    'email',
+    'OperationsPortal.API',
+    'OperationsPortal.User',
+  ],
   serviceConfiguration: {
     authorizationEndpoint:
-      'https://devsbxopsportal.b2clogin.com/devsbxopsportal.onmicrosoft.com/b2c_1a_signin/oauth2/v2.0/authorize',
+      'https://sbx-operations-portal-user-web-dev.azurewebsites.net/connect/authorize',
     tokenEndpoint:
-      'https://devSbxOpsPortal.b2clogin.com/devSbxOpsPortal.onmicrosoft.com/b2c_1a_signin/oauth2/v2.0/token',
+      'https://sbx-operations-portal-user-web-dev.azurewebsites.net/connect/token',
   },
   additionalParameters: {
-    login_hint: 'carrier.user7@yopmail.com ',
+    login_hint: 'Shaikhi@ussilica.com',
+    prompt: 'login',
   },
 };
 
